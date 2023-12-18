@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-     private float startingHealth;
+    public float startingHealth;
     public float currentHealth { get; private set; }
 
     private void Awake()
@@ -23,8 +23,13 @@ public class Health : MonoBehaviour
         }
         else
         {
-            //die
+            Destroy(gameObject);
         }
+    }
+
+    public void addHealth(float_value)
+    {
+        currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);
     }
 
     private void Update()
