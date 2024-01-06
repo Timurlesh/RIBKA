@@ -13,4 +13,9 @@ public class Buttons : MonoBehaviour
     {
 
     }
+
+    public void LoadLevel2()
+    {
+        SceneManager.LoadScene("lvl2");
+    }
 }
